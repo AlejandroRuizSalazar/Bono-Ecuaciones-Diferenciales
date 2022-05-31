@@ -21,7 +21,7 @@ k = 101006.5
 Funciones transformadas a un sistema de ecuaciones y' = -(b_a/m)*y - g & y'= -(k/m)*x.
 """
 
-def CaídaLibre(v,t):
+def CaidaLibre(v,t):
     x,y = v
     return [y, -((b_a/m)*y)-g]
 
@@ -115,7 +115,7 @@ Finalmente, se muestran las iteraciones, las condiciones iniciales del problema 
 
 iteraciones = 6
 condicionesiniciales = [10,0]
-posiciontotal,velocidadtotal,tiempototal = coordenadas(CaídaLibre,MasaResorte,0,iteraciones,condicionesiniciales,0,10,posicion=[],velocidad=[],tiempo=[])
+posiciontotal,velocidadtotal,tiempototal = coordenadas(CaidaLibre,MasaResorte,0,iteraciones,condicionesiniciales,0,10,posicion=[],velocidad=[],tiempo=[])
 
 plt.plot(tiempototal,velocidadtotal,'-.',color='red')
 plt.legend(['Velocidad'],fontsize=13)
